@@ -11,6 +11,7 @@ SyslogIdentifier=pcsc-over-http
 User=nobody
 Group=nobody
 Environment=NODE_VERSION=6.10.2
+Restart=on-abort
 
 [Install]
 WantedBy=multi-user.target
