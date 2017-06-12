@@ -5,15 +5,11 @@ Description=PC/SC over HTTP service
 Type=simple
 WorkingDirectory=/home/pi/.pcsc-over-http
 ExecStart=/home/pi/.nvm/nvm-exec yarn serve
-Restart=on-abort
-LimitNOFILE=4096
-IgnoreSIGPIPE=false
-KillMode=control-group
 StandardOutput=syslog
 StandardError=syslog
+SyslogIdentifier=pcsc-over-http
 User=nobody
 Group=nobody
-SyslogIdentifier=pcsc-over-http
 Environment=NODE_VERSION=6.10.2
 
 [Install]
