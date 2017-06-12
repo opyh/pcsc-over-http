@@ -78,7 +78,6 @@ app.post('/readers/:name', (req, res) => {
   );
 });
 
-app.autoQuit({ timeout: 1800 });
 app.listen(port, ipAddress);
 
 log(`Initializing PC/SC over HTTP server on http://${ipAddress}:${port}`);
