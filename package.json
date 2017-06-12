@@ -11,7 +11,7 @@
     "systemd": "^0.2.6"
   },
   "scripts": {
-    "start": "while true ; do (babel index.js | node 2>&1 | tee -a server.log); echo 'Server process ended. Restarting in 5 seconds... Press Ctrl-C again to stop.'; sleep 5; done"
+    "start": "babel index.js | node"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
