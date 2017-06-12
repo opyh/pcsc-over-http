@@ -12,7 +12,8 @@
     "systemd": "^0.2.6"
   },
   "scripts": {
-    "start": "babel index.js | node"
+    "start": "babel index.js | node",
+    "install": "sudo cp systemd/pcsc-over-http.* /etc/systemd/system/"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
