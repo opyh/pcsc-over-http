@@ -1,0 +1,162 @@
+yarn start v0.23.2
+yarn start v0.23.2
+$ babel index.js | node 
+$ babel index.js | node 
+2017-06-12T19:15:25.333Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+2017-06-12T19:15:25.333Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+2017-06-12T19:15:25.343Z New reader detected ACS ACR38U-CCID
+2017-06-12T19:15:25.343Z New reader detected ACS ACR38U-CCID
+2017-06-12T19:15:25.344Z Status for ACS ACR38U-CCID : 34 ATR: 3b00
+2017-06-12T19:15:25.344Z Status for ACS ACR38U-CCID : 34 ATR: 3b00
+2017-06-12T19:15:25.345Z Card inserted
+2017-06-12T19:15:25.345Z Card inserted
+2017-06-12T19:15:25.348Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:15:25.348Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:15:25.349Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:15:25.349Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:15:25.350Z Data received <Buffer 90 00>
+2017-06-12T19:15:25.350Z Data received <Buffer 90 00>
+2017-06-12T19:15:25.378Z Data received <Buffer 01 02 03 04 05 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ... >
+2017-06-12T19:15:25.378Z Data received <Buffer 01 02 03 04 05 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ... >
+yarn start v0.23.2
+$ babel index.js | node 
+2017-06-12T19:16:33.758Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+2017-06-12T19:16:33.766Z New reader detected ACS ACR38U-CCID
+2017-06-12T19:16:33.768Z Status for ACS ACR38U-CCID : 34 ATR: 3b00
+2017-06-12T19:16:33.768Z Card inserted
+2017-06-12T19:16:33.771Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:16:33.773Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:16:33.773Z Data received <Buffer 90 00>
+2017-06-12T19:16:33.801Z Data received <Buffer 01 02 03 04 05 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ... >
+2017-06-12T19:17:00.377Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+2017-06-12T19:17:00.388Z New reader detected ACS ACR38U-CCID
+2017-06-12T19:17:00.389Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:17:00.390Z Card inserted
+2017-06-12T19:17:01.149Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:17:02.226Z Data received <Buffer 90 00>
+2017-06-12T19:17:03.328Z Data received <Buffer 01 02 03 04 05 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ... >
+2017-06-12T19:17:28.444Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+2017-06-12T19:17:28.454Z New reader detected ACS ACR38U-CCID
+2017-06-12T19:17:28.455Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:17:28.456Z Card inserted
+2017-06-12T19:17:29.145Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:17:30.222Z Data received <Buffer 90 00>
+2017-06-12T19:17:31.324Z Data received <Buffer 01 02 03 04 05 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ... >
+2017-06-12T19:25:50.166Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+2017-06-12T19:25:50.175Z New reader detected ACS ACR38U-CCID
+2017-06-12T19:25:50.176Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:25:50.177Z Card inserted
+2017-06-12T19:25:50.416Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:25:51.494Z Data received <Buffer 90 00>
+2017-06-12T19:25:52.595Z Data received <Buffer 01 02 03 04 05 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ... >
+2017-06-12T19:25:55.823Z Data received <Buffer 90 00>
+2017-06-12T19:26:04.113Z Status for ACS ACR38U-CCID : 18 ATR: 
+2017-06-12T19:26:04.113Z Card removed.
+2017-06-12T19:26:04.114Z ACS ACR38U-CCID disconnected.
+2017-06-12T19:26:05.489Z Transmission error Error: Card Reader not connected
+    at CardReader.transmit (/Users/hypo2/code/mine/pcsc-over-http/node_modules/pcsclite/lib/pcsclite.js:122:19)
+    at Object.transmit ([stdin]:73:12)
+    at app.post ([stdin]:46:14)
+    at Layer.handle [as handle_request] (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/index.js:365:14) undefined
+Error: Can't set headers after they are sent.
+    at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:344:11)
+    at ServerResponse.header (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/response.js:730:10)
+    at ServerResponse.send (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/response.js:256:15)
+    at readerInfo.transmit.error ([stdin]:51:21)
+    at reader.transmit ([stdin]:77:28)
+    at CardReader.transmit (/Users/hypo2/code/mine/pcsc-over-http/node_modules/pcsclite/lib/pcsclite.js:122:16)
+    at Object.transmit ([stdin]:73:12)
+    at app.post ([stdin]:46:14)
+    at Layer.handle [as handle_request] (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/layer.js:95:5)
+2017-06-12T19:27:05.102Z Transmission error Error: Card Reader not connected
+    at CardReader.transmit (/Users/hypo2/code/mine/pcsc-over-http/node_modules/pcsclite/lib/pcsclite.js:122:19)
+    at Object.transmit ([stdin]:73:12)
+    at app.post ([stdin]:46:14)
+    at Layer.handle [as handle_request] (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/index.js:281:22
+    at param (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/index.js:354:14)
+    at param (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/index.js:365:14) undefined
+Error: Can't set headers after they are sent.
+    at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:344:11)
+    at ServerResponse.header (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/response.js:730:10)
+    at ServerResponse.send (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/response.js:256:15)
+    at readerInfo.transmit.error ([stdin]:51:21)
+    at reader.transmit ([stdin]:77:28)
+    at CardReader.transmit (/Users/hypo2/code/mine/pcsc-over-http/node_modules/pcsclite/lib/pcsclite.js:122:16)
+    at Object.transmit ([stdin]:73:12)
+    at app.post ([stdin]:46:14)
+    at Layer.handle [as handle_request] (/Users/hypo2/code/mine/pcsc-over-http/node_modules/express/lib/router/layer.js:95:5)
+2017-06-12T19:27:08.043Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+2017-06-12T19:27:08.051Z New reader detected ACS ACR38U-CCID
+2017-06-12T19:27:08.053Z Status for ACS ACR38U-CCID : 18 ATR: 
+2017-06-12T19:27:08.054Z Card removed.
+2017-06-12T19:27:08.054Z ACS ACR38U-CCID disconnected.
+2017-06-12T19:27:13.781Z Status for ACS ACR38U-CCID : 34 ATR: 3b00
+2017-06-12T19:27:13.781Z Card inserted
+2017-06-12T19:27:13.785Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:27:13.787Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:27:13.787Z Data received <Buffer 90 00>
+2017-06-12T19:27:13.815Z Data received <Buffer 01 02 03 04 05 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ... >
+2017-06-12T19:27:17.050Z Data received <Buffer 90 00>
+2017-06-12T19:27:23.432Z Status for ACS ACR38U-CCID : 18 ATR: 
+2017-06-12T19:27:23.432Z Card removed.
+2017-06-12T19:27:23.433Z ACS ACR38U-CCID disconnected.
+2017-06-12T19:27:28.365Z Status for ACS ACR38U-CCID : 34 ATR: 3b00
+2017-06-12T19:27:28.365Z Card inserted
+2017-06-12T19:27:28.367Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:27:28.369Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:27:28.369Z Data received <Buffer 90 00>
+2017-06-12T19:27:28.395Z Data received <Buffer 01 02 03 04 05 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ... >
+2017-06-12T19:27:29.475Z Data received <Buffer 90 00>
+2017-06-12T19:29:42.845Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+2017-06-12T19:29:42.853Z New reader detected ACS ACR38U-CCID
+2017-06-12T19:29:42.854Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:29:42.855Z Card inserted
+2017-06-12T19:29:43.508Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:29:44.585Z Data received <Buffer 90 00>
+2017-06-12T19:29:45.686Z Data received <Buffer 01 02 03 04 05 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ... >
+2017-06-12T19:29:47.912Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+2017-06-12T19:29:47.920Z New reader detected ACS ACR38U-CCID
+2017-06-12T19:29:47.922Z Status for ACS ACR38U-CCID : 290 ATR: 3b00
+2017-06-12T19:29:47.922Z Card inserted
+2017-06-12T19:29:48.912Z Protocol( ACS ACR38U-CCID ): 1
+2017-06-12T19:29:49.989Z Data received <Buffer 90 00>
+2017-06-12T19:29:49.990Z Transmission error Error: SCardTransmit error: Card is unpowered.(0x80100067)
+    at Error (native) undefined
+2017-06-12T19:30:47.835Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 127.0.0.1:1337
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at Server._listen2 (net.js:1253:14)
+    at listen (net.js:1289:10)
+    at net.js:1399:9
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+2017-06-12T19:30:53.453Z Initializing PC/SC over HTTP server on http://127.0.0.1:1337
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 127.0.0.1:1337
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at Server._listen2 (net.js:1253:14)
+    at listen (net.js:1289:10)
+    at net.js:1399:9
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)

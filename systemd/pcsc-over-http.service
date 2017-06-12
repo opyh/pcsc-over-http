@@ -1,0 +1,16 @@
+[Unit]
+Description=PC/SC over HTTP service
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/
+ExecStart=/usr/bin/npm /home/pi/hello_world.py
+Restart=on-abort
+StandardOutput=syslog
+StandardError=syslog
+User=nobody
+Group=nobody
+SyslogIdentifier=pcsc-over-http
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+[include]
+
+[libs]
+flow-typed
+./node_modules/fbjs/flow/lib
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+module.system=haste
+esproposal.class_instance_fields=enable
+esproposal.class_static_fields=enable
+# Ignore flow warning about not supporting decorator types fully yet
+esproposal.decorators=ignore
+suppress_type=$FlowIssue
+
+[ignore]
+.*/build/.*
+.*/node_modules/radium/src/.*
