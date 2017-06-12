@@ -4,13 +4,13 @@ Description=PC/SC over HTTP service
 [Service]
 Type=simple
 WorkingDirectory=/home/pi/.pcsc-over-http
-ExecStart=/home/pi/.nvm/nvm-exec yarn serve
+ExecStart=/home/pi/.nvm/nvm-exec npm start
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=pcsc-over-http
 User=nobody
 Group=nobody
-Environment=NODE_VERSION=6.10.2
+Environment=NODE_VERSION=current
 Restart=on-abort
 
 [Install]
