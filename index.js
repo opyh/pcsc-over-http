@@ -3,14 +3,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const pcsclite = require('pcsclite');
-require('systemd');
-require('autoquit');
+const systemdSocket = require('systemd-socket');
 
 type SuccessCallback = (data: Buffer) => void;
 type ErrorCallback = (error: Error) => void;
 
-const port = process.env.LISTEN_PID ? 'systemd' : (process.env.PORT || 44602);
-const ipAddress = process.env.BIND_IP || '127.0.0.1';
 const selectCardTypeCommand = new Buffer([0xFF, 0xA4, 0x00, 0x00, 0x01, 0x01]);
 const readMemoryCardCommand = new Buffer([0xFF, 0xB0, 0x00, 0x00, 0xFF]);
 const writeMemoryCardCommand = inputBufferArray =>
@@ -36,7 +33,7 @@ function log(...args) {
 const connectedReaders = {};
 const state: State = {
   connectedReaders,
-  lastError: 'Test error!',
+  lastError: null,
 };
 
 const app = express();
@@ -78,9 +75,13 @@ app.post('/readers/:name', (req, res) => {
   );
 });
 
-app.listen(port, ipAddress);
+const socket = systemdSocket();
+if (socket) {
+  log('Using socket', socket, 'for listeing...');
+}
+const server = app.listen(socket || 44602);
 
-log(`Initializing PC/SC over HTTP server on http://${ipAddress}:${port}`);
+log('Initializing PC/SC over HTTP server on', server.address());
 
 function responseIsOkay(responseBuffer) {
   return responseBuffer.length > 2 ||

@@ -4,14 +4,14 @@ Description=PC/SC over HTTP service
 [Service]
 Type=simple
 WorkingDirectory=/home/pi/.pcsc-over-http
-ExecStart=/home/pi/.nvm/nvm-exec npm start
-StandardOutput=syslog
-StandardError=syslog
+ExecStart=/home/pi/.nvm/versions/node/v6.10.2/bin/node dist/index.js
+StandardOutput=syslog+console
+StandardError=syslog+console
 SyslogIdentifier=pcsc-over-http
-User=nobody
-Group=nobody
-Environment=NODE_VERSION=current
+Environment=NODE_VERSION=6.10.2
+Environment=PATH=/home/pi/.nvm/versions/node/v6.10.2/bin:/usr/bin:/usr/local/bin:/bin
 Restart=on-abort
+RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
