@@ -46,7 +46,15 @@ app.get('/', (req, res) => {
   res.json(state);
 });
 
+app.options('/readers/:name', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.end();
+});
+
 app.post('/readers/:name', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
   if (!(req.body instanceof Array)) {
     res.status(422).json({ lastError: 'Please supply an array as request body JSON.' });
     return;
