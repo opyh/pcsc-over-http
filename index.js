@@ -11,7 +11,7 @@ type ErrorCallback = (error: Error) => void;
 const selectCardTypeCommand = new Buffer([0xFF, 0xA4, 0x00, 0x00, 0x01, 0x01]);
 const readMemoryCardCommand = new Buffer([0xFF, 0xB0, 0x00, 0x00, 0xFF]);
 const writeMemoryCardCommand = inputBufferArray =>
-  new Buffer([0xFF, 0xD0, 0x00, 0x00, inputBufferArray.length].concat(inputBufferArray));
+  new Buffer([0xFF, 0xD0, 0x00, Math.floor(inputBufferArray.length / 256), inputBufferArray.length % 256].concat(inputBufferArray));
 
 type ReaderInfo = {
   reader: Object,
@@ -157,9 +157,9 @@ pcsc.on('reader', (reader) => {
             connectedReaders[reader.name].protocol = protocol;
             log('Protocol(', reader.name, '):', protocol);
             transmit(selectCardTypeCommand, 2, () => {
-              transmit(readMemoryCardCommand, 257, (data) => {
+              transmit(readMemoryCardCommand, 255, (data) => {
                 if (data.length > 2) {
-                  readerInfo.currentCardContent = new Array(data);
+                  readerInfo.currentCardContent = data;
                   state.lastError = null;
                 }
               });
