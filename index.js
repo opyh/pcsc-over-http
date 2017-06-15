@@ -72,9 +72,20 @@ app.post('/readers/:name', (req, res) => {
     res.status(404).json({ lastError: 'No card inserted.' });
     return;
   }
+
   const command = writeMemoryCardCommand(req.body);
+  log('Writing command', command, 'for request body', req.body);
+
   readerInfo.transmit(command, 2,
-    () => { res.status(200).json({ lastError: null, message: 'Data written.' }); },
+    () => {
+      readerInfo.transmit(readMemoryCardCommand, 255, (buffer) => {
+        if (buffer.length > 2) {
+          readerInfo.currentCardContent = buffer;
+          state.lastError = null;
+        }
+        res.status(200).json({ lastError: null, message: 'Data written.' });
+      });
+    },
     (error) => {
       const lastError = error.message;
       state.lastError = lastError;
