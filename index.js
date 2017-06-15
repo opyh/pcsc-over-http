@@ -114,7 +114,7 @@ pcsc.on('reader', (reader) => {
     reader.transmit(cmd, length, protocol, (err, data) => {
       if (err || !responseIsOkay(data)) {
         log('Transmission error', err, data);
-        state.lastError = err;
+        state.lastError = err.message;
         if (errorCallback) errorCallback(err);
         return;
       }
@@ -126,7 +126,7 @@ pcsc.on('reader', (reader) => {
   connectedReaders[reader.name].transmit = transmit;
 
   reader.on('error', function onError(err) {
-    readerInfo.lastError = err;
+    readerInfo.lastError = err.message;
     log('Reader ', this.name, ' had an error:', err.message);
   });
 
@@ -178,5 +178,5 @@ pcsc.on('reader', (reader) => {
 
 pcsc.on('error', (err) => {
   log('PCSC error:', err.message);
-  state.lastError = err;
+  state.lastError = err.message;
 });
