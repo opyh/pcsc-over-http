@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "*": ["types/*"] },
+    "module": "commonjs",
+    "target": "es2017",
+    "allowJs": false,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "types": [
+      "node",
+    ],
+    "typeRoots" : [
+      "./node_modules/@types",
+      "./typings"
+    ],
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017",
+      "dom"
+    ],
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": false
+  },
+  "compileOnSave": true
+}
